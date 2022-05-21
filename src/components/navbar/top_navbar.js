@@ -11,13 +11,13 @@ const TopNavbar = () => {
         <SearchInput placeholder='Search by brand, category, item...' />
       </SearchContainer>
 
-      <img src={Logo} width='330px' height='70px' />
+      <a href='#'><img src={Logo} width='330px' height='70px' /></a>
 
       <RightSide>
         <SellButton className="btn">Sell An Item</SellButton>
         <button className="btn" style={{ marginLeft: '10px' }}>Sign In</button>
         <button className="btn" style={{ marginRight: '5px' }}>Sign Up</button>
-        <img src={ShoppingBagImage} width='30px' height='30px'/>
+        <a href='#'><img src={ShoppingBagImage} width='30px' height='30px'/></a>
       </RightSide>
     </NavbarContainer>
   );
