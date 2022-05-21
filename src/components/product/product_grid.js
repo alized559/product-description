@@ -302,6 +302,7 @@ const ProductInfoContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 `;
 
 const SpaceBetweenFlex = styled.div`
