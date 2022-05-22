@@ -283,7 +283,7 @@ const AddToBagButton = styled.button`
 const ProductInfo = () => {
   return (
     <ProductInfoContainer>
-      <div style={{ width: '35%' }}>
+      <ProductDetails>
         <h3>Details</h3>
         <SpaceBetweenFlex><p style={{ fontWeight: 'bold' }}>Brand</p><p>Chanel</p></SpaceBetweenFlex>
         <SpaceBetweenFlex><p style={{ fontWeight: 'bold' }}>Model</p><p>Classic</p></SpaceBetweenFlex>
@@ -291,11 +291,11 @@ const ProductInfo = () => {
         <SpaceBetweenFlex><p style={{ fontWeight: 'bold' }}>Color</p><p>Black</p></SpaceBetweenFlex>
         <SpaceBetweenFlex><p style={{ fontWeight: 'bold' }}>Size</p><p>Small</p></SpaceBetweenFlex>
         <SpaceBetweenFlex><p style={{ fontWeight: 'bold' }}>Dimensions</p><p>28 * 18 * 5 cm</p></SpaceBetweenFlex>
-      </div>
+      </ProductDetails>
 
-      <div style={{ marginLeft: '50px', width: '60%' }}>
+      <ProductSeller>
         <h3>Seller</h3>
-        <SpaceBetweenFlex>
+        <SellerInfoFlex>
           <div style={{ display: 'flex', flexDirection: 'row' }}>
             <img src={UserDefaultImage} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
             <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '10px', justifyContent: 'center' }}>
@@ -306,11 +306,11 @@ const ProductInfo = () => {
             </div>
           </div>
 
-          <div>
+          <SellerBtns>
             <UnfollowButton className='btn'>Unfollow</UnfollowButton>
             <ContactButton className='btn'>Contact</ContactButton>
-          </div>
-        </SpaceBetweenFlex>
+          </SellerBtns>
+        </SellerInfoFlex>
 
         <div style={{ marginTop: '20px', width: '50%' }}>
           <h3>Seller Reviews</h3>
@@ -344,7 +344,7 @@ const ProductInfo = () => {
           </SpaceBetweenFlex>
           <a href='#' style={{ float: 'right', textDecoration: 'underline' }}>See More</a>
         </div>
-      </div>
+      </ProductSeller>
 
       <div style={{ width: '35%', marginTop: '40px' }}>
         <FlexWrapper2>
@@ -387,6 +387,10 @@ const ProductInfoContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 40px;
+
+  @media only screen and (max-width: 1115px) {
+    flex-direction: column;
+  }
 `;
 
 const SpaceBetweenFlex = styled.div`
@@ -394,6 +398,45 @@ const SpaceBetweenFlex = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+`;
+
+const SellerInfoFlex = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: 1115px) {
+    width: 500px;
+  }
+`;
+
+const ProductDetails = styled.div`
+  width: 35%;
+
+  @media only screen and (max-width: 1115px) {
+    width: 300px;
+  }
+`;
+
+const ProductSeller = styled.div`
+  margin-left: 50px;
+  width: 60%;
+
+  @media only screen and (max-width: 1115px) {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 650px;
+  }
+`;
+
+const SellerBtns = styled.div`
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 50px;
+  }
 `;
 
 const UnfollowButton = styled.button`
@@ -404,6 +447,10 @@ const UnfollowButton = styled.button`
   text-align: center;
   padding: 0;
   margin-right: 10px;
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 5px;
+  }
 `;
 
 const ContactButton = styled.button`
@@ -417,6 +464,10 @@ const ContactButton = styled.button`
   &:hover {
     color: white;
   }
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 5px;
+  }
 `;
 
 const FlexWrapper2 = styled.div`
@@ -426,6 +477,10 @@ const FlexWrapper2 = styled.div`
   align-items: center;
   background-color: #EAEAEA;
   border-radius: 7px;
+
+  @media only screen and (max-width: 1115px) {
+    width: 350px;
+  }
 `;
 
 const CommentContainer = styled.div`
@@ -433,6 +488,11 @@ const CommentContainer = styled.div`
   margin: 30px 0 0 60px;
   background-color: #EAEAEA;
   padding: 20px;
+
+  @media only screen and (max-width: 1115px) {
+    margin-left: 0;
+    width: 350px;
+  }
 `;
 
 const CommentInput = styled.input`
