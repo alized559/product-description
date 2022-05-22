@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Logo from '../../images/logo.png';
-import ShoppingBagImage from '../../images/cart.png';
+import Logo from '../../../images/logo.png';
+import ShoppingBagImage from '../../../images/cart.png';
 
 const TopNavbar = () => {
   return (
