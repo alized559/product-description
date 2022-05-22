@@ -415,7 +415,7 @@ const ProductDetails = styled.div`
   width: 35%;
 
   @media only screen and (max-width: 1115px) {
-    width: 300px;
+    width: 380px;
   }
 `;
 

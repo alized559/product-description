@@ -23,9 +23,9 @@ const MayAlsoLike = () => {
             <br/>
             <p>
               Rolex<br/>
-              <span>Oyster-perpetual<br/> 11,700 USD</span><br/>
-              <img src={LocationImage} width='20px' height='20px' />Beirut
+              <span>Oyster-perpetual<br/> 11,700 USD</span>
             </p>
+            <p><img src={LocationImage} width='20px' height='20px' />Beirut</p>
           </ProductCard>
         </div>
 
@@ -43,9 +43,9 @@ const MayAlsoLike = () => {
               Hermes<br/>
               <span>
                 Yellow Leather Belt<br/> 2,100 USD<br/>
-                <img src={LocationImage} width='20px' height='20px' />Beirut
               </span>
             </p>
+            <p><img src={LocationImage} width='20px' height='20px' />Beirut</p>
           </ProductCard>
         </div>
 
@@ -63,9 +63,9 @@ const MayAlsoLike = () => {
               Audemars Piguet<br/>
               <span>
                 ROYAL OAK YELLOW<br/> 180,000 USD<br/>
-                <img src={LocationImage} width='20px' height='20px' />Dubai
               </span>
             </p>
+            <p><img src={LocationImage} width='20px' height='20px' />Dubai</p>
           </ProductCard>
         </div>
 
@@ -81,11 +81,9 @@ const MayAlsoLike = () => {
             <br/>
             <p>
               Gucci<br/>
-              <span>
-                Beige Canvas Wallet<br/> 370 USD<br/>
-                <img src={LocationImage} width='20px' height='20px' />Beirut
-              </span>
+              <span>Beige Canvas Wallet<br/> 370 USD</span>
             </p>
+            <p><img src={LocationImage} width='20px' height='20px' />Beirut</p>
           </ProductCard>
         </div>
       </div>
@@ -95,7 +93,8 @@ const MayAlsoLike = () => {
 
 const ProductContainer = styled.div`
   background-color: #F9F9F9;
-  padding: 100px;
+  padding: 130px 100px 100px 100px;
+  margin-top: 50px;
 `;
 
 const ProductCard = styled.div`
@@ -108,6 +107,10 @@ const ProductCard = styled.div`
 
   > p {
     line-height: 25px;
+  }
+
+  @media only screen and (max-width: 1400px) {
+    margin-top: 20px;
   }
 `;
 
