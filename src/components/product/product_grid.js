@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import ProductItem1 from '../../images/product/product1/product-item1.png';
 import ProductItem2 from '../../images/product/product1/product-item2.png';
@@ -9,6 +9,8 @@ import ProductItem6 from '../../images/product/product1/product-item6.png';
 import ShoppingBagImage from '../../images/cart.png';
 import LocationImage from '../../images/location.png';
 import UserDefaultImage from '../../images/user-default-img.png';
+import PropTypes from 'prop-types';
+import { productItems } from './product_items';
 
 const ProductGrid = () => {
   return (
@@ -17,7 +19,7 @@ const ProductGrid = () => {
         <h1>Louis Vuitton</h1>
         <p>Deauville Cloth Handbag</p>
       </Header>
-      <Product />
+      <Product images={productItems} />
       <ProductInfo />
     </div>
   );
@@ -39,17 +41,22 @@ const Header = styled.div`
   }
 `;
 
-const Product = () => {
+const Product = props => {
+  const [currentItem, setCurrentItem] = useState(props.images[0]);
+
+  function slide(index) {
+    setCurrentItem(props.images[index]);
+  };
+
   return (
     <div>
       <FlexWrapper>
         <ProductItems>
-          <img src={ProductItem1} />
-          <img src={ProductItem2} />
-          <img src={ProductItem3} />
-          <img src={ProductItem4} />
-          <img src={ProductItem5} />
-          <img src={ProductItem6} />
+          {
+            props.images.map((item, index) => (
+              <img key={index} src={item} alt='Item Image' onClick={() => slide(index)} />
+            ))
+          }
         </ProductItems>
 
         <ProductContainer>
@@ -65,7 +72,7 @@ const Product = () => {
             </div>
           </ProductIcons>
 
-          <ProductImage src={ProductItem1} />
+          <ProductImage src={currentItem} alt='Product Image' />
         </ProductContainer>
 
         <RightSide>
@@ -114,6 +121,10 @@ const Product = () => {
       </FlexWrapper>
     </div>
   );
+};
+
+Product.propTypes = {
+  items: PropTypes.array.isRequired
 };
 
 const FlexWrapper = styled.div`
