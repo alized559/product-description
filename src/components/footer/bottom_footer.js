@@ -24,6 +24,7 @@ const FooterContainer = styled.div`
   padding: 20px 100px 20px 100px;
   color: #909090;
   line-height: 20px;
+  font-family: Montserrat-Medium;
 
   @media only screen and (max-width: 735px) {
     padding: 30px;

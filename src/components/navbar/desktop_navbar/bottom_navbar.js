@@ -25,6 +25,7 @@ const NavbarList = styled.div`
   align-items: center;
   background-color: #F5F5F5;
   padding: 30px;
+  font-family: Inter-Regular;
 `;
 
 const NavbarItem = styled.div`
@@ -32,6 +33,11 @@ const NavbarItem = styled.div`
     text-decoration: none;
     color: black;
     font-size: 18px;
+
+    &:hover {
+      color: #C6AC96;
+      transition: 0.3s;
+    }
   }
 `;
 

@@ -10,48 +10,48 @@ const TopFooter = () => {
         <div>
           <h5>OUR SERVICES</h5>
           <p>
-            The Concept<br/>
-            Partner Services
+            <a href='#'>The Concept</a><br/>
+            <a href='#'>Partner Services</a>
           </p>
         </div>
 
         <div>
           <h5>BUY</h5>
           <p>
-            Tracking<br/>
-            Authentication<br/>
-            Shipping Policy<br/>
-            Return Policy<br/>
-            Quality Control
+            <a href='#'>Tracking</a><br/>
+            <a href='#'>Authentication</a><br/>
+            <a href='#'>Shipping Policy</a><br/>
+            <a href='#'>Return Policy</a><br/>
+            <a href='#'>Quality Control</a>
           </p>
         </div>
 
         <div>
           <h5>SELL</h5>
           <p>
-            How To Sell<br/>
-            Sell an Item<br/>
-            Handling<br/>
-            Trusted Sellers
+            <a href='#'>How To Sell</a><br/>
+            <a href='#'>Sell an Item</a><br/>
+            <a href='#'>Handling</a><br/>
+            <a href='#'>Trusted Sellers</a>
           </p>
         </div>
 
         <div>
           <h5>HELP</h5>
           <p>
-            Help Center
+            <a href='#'>Help Center</a>
           </p>
         </div>
 
         <div>
           <h5>LIBAS LLC</h5>
           <p>
-            About US<br/>
-            How it works<br/>
-            Latest Stories<br/>
-            Our Team<br/>
-            Join Us<br/>
-            Contact Us<br/>
+            <a href='#'>About US</a><br/>
+            <a href='#'>How it works</a><br/>
+            <a href='#'>Latest Stories</a><br/>
+            <a href='#'>Our Team</a><br/>
+            <a href='#'>Join Us</a><br/>
+            <a href='#'>Contact Us</a><br/>
           </p>
         </div>
       </LinksContainer>
@@ -60,13 +60,13 @@ const TopFooter = () => {
         <p>Lebanon - English US - $ - USD <i className='fa fa-angle-down'></i></p>
         <FooterBotFlex>
           <FooterBotFlexItem>
-            <p>Legal Information</p>
-            <p>Terms and Conditions</p>
-            <p>Privacy Policy & Cookies</p>
-            <p>Partners</p>
-            <i className='fa fa-twitter-square'></i>
-            <i className='fa fa-facebook-square'></i>
-            <i className='fa fa-instagram'></i>
+            <p><a href='#'>Legal Information</a></p>
+            <p><a href='#'>Terms and Conditions</a></p>
+            <p><a href='#'>Privacy Policy & Cookies</a></p>
+            <p><a href='#'>Partners</a></p>
+            <a><i className='fa fa-twitter-square'></i></a>
+            <a><i className='fa fa-facebook-square'></i></a>
+            <a><i className='fa fa-instagram'></i></a>
           </FooterBotFlexItem>
 
           <FooterBotFlexItem>
@@ -82,6 +82,7 @@ const TopFooter = () => {
 const FooterContainer = styled.div`
   background-color: #221f1e;
   padding-bottom: 20px;
+  font-family: Montserrat-Medium;
 `;
 
 const LinksContainer = styled.div`
@@ -92,12 +93,20 @@ const LinksContainer = styled.div`
 
   > div > h5 {
     color: white;
+    font-family: Montserrat-Bold;
   }
 
-  > div > p {
+  > div > p > a {
     color: #737171;
     line-height: 32px;
     margin-top: 18px;
+    font-family: Montserrat-Medium;
+    text-decoration: none;
+
+    &:hover {
+      color: #C6AC96;
+      transition: 0.3s;
+    }
   }
 
   @media only screen and (max-width: 950px) {
@@ -124,15 +133,27 @@ const FooterBotFlex = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  > div > p {
+  > div > p > a {
     color: #737171;
     padding-right: 25px;
+    text-decoration: none;
+
+    &:hover {
+      color: #C6AC96;
+      transition: 0.3s;
+    }
   }
 
-  > div > i {
+  > div > a > i {
     margin-top: 5px;
     color: #737171;
     padding-right: 15px;
+    cursor: pointer;
+
+    &:hover {
+      color: #C6AC96;
+      transition: 0.3s;
+    }
   }
 
   @media only screen and (max-width: 1190px) {
@@ -165,6 +186,7 @@ const FooterBotFlexItem = styled.div`
     > a > img:first-child {
       margin-right: 10px;
     }
+    font-size: 14px;
   }
 `;
 

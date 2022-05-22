@@ -14,8 +14,8 @@ const ProductGrid = () => {
   return (
     <div>
       <Header>
-        <h1 style={{ fontSize: '60px' }}>Louis Vuitton</h1>
-        <p style={{ fontSize: '32px' }}>Deauville Cloth Handbag</p>
+        <h1>Louis Vuitton</h1>
+        <p>Deauville Cloth Handbag</p>
       </Header>
       <Product />
       <ProductInfo />
@@ -29,6 +29,13 @@ const Header = styled.div`
 
   > h1 {
     color: #C6AC96;
+    font-size: 55px;
+    font-family: Montserrat-SemiBold;
+  }
+
+  > p {
+    font-size: 30px;
+    font-family: Montserrat-Regular;
   }
 `;
 
@@ -65,27 +72,27 @@ const Product = () => {
           <PriceFlex>
             <div>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <s><p style={{ fontWeight: 'bold', fontSize: '22px', marginRight: '7px' }}>$2100</p></s>
-                <p style={{ fontSize: '18px', marginRight: '7px', color: '#DD0000' }}>$1900</p>
-                <p style={{ fontSize: '12px', color: '#146900' }}>-70%</p>
+                <s><p style={{ fontFamily: 'Montserrat-Bold', fontSize: '22px', marginRight: '7px' }}>$2100</p></s>
+                <p style={{ fontFamily: 'Montserrat-Regular', fontSize: '18px', marginRight: '7px', color: '#DD0000' }}>$1900</p>
+                <p style={{ fontFamily: 'Montserrat-Light', fontSize: '10px', color: '#146900' }}>-70%</p>
               </div>
 
-              <p style={{ color: '#777777', fontSize: '16px' }}>Estimated retail price $2,000</p>
+              <p style={{ color: '#777777', fontSize: '14px', fontFamily: 'Montserrat-Regular' }}>Estimated retail price $2,000</p>
             </div>
 
             <div>
-              <p style={{ color: '#C49235' }}><i className='fa fa-check'></i> Trusted Seller</p>
+              <p style={{ color: '#C49235', fontFamily: 'Montserrat-Regular' }}><i className='fa fa-check'></i> Trusted Seller</p>
             </div>
           </PriceFlex>
 
-          <p style={{ lineHeight: '18px' }}>
+          <p style={{ lineHeight: '18px', fontFamily: 'Montserrat-Medium' }}>
             <i className='fa fa-id-badge' style={{ height: '100%' }}></i>
             +15 USD Control and authentication<br/>
             Physical control and authentication<br/>
             by our experts. <a href='#' style={{ color: 'inherit', textDecoration: 'underline' }}>Learn more</a>
           </p>
           
-          <p style={{ lineHeight: '18px' }}>
+          <p style={{ lineHeight: '18px', fontFamily: 'Montserrat-Medium' }}>
             Good Condition<br/>
             Brown Leather<br/>
             Classic LV leather, no scratches
@@ -99,7 +106,7 @@ const Product = () => {
             <AddToBagButton className="btn"><img src={ShoppingBagImage} width='30px' height='30px'/></AddToBagButton>
           </OptionFlex>
 
-          <div style={{ display: 'flex', marginTop: '20px', fontSize: '20px' }}>
+          <div style={{ display: 'flex', marginTop: '20px', fontSize: '18px', fontFamily: 'Montserrat-Medium' }}>
             <img src={LocationImage} width='30px' height='30px' />
             <p>Beirut, Lebanon</p>
           </div>
@@ -200,8 +207,8 @@ const OrderButton = styled.button`
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 35px;
-  font-weight: bold;
+  font-size: 32px;
+  font-family: Montserrat-Bold;
 
   &:hover {
     color: white;
@@ -231,11 +238,16 @@ const OptionFlex = styled.div`
 const RequestToViewButton = styled.button`
   width: 30%;
   border-radius: 0;
-  font-weight: bold;
+  font-family: Montserrat-Bold;
   background-color: white;
   padding-top: 12px;
   padding-bottom: 15px;
   margin-right: 20px;
+  font-size: 14px;
+
+  &:hover {
+    background-color: rgb(205, 205, 205);
+  }
 
   @media only screen and (max-width: 1185px) {
     width: 120px;
@@ -249,11 +261,15 @@ const RequestToViewButton = styled.button`
 const MakeAnOfferButton = styled.button`
   width: 50%;
   border-radius: 0;
-  font-weight: bold;
+  font-family: Montserrat-Bold;
   background-color: #C6AC96;
   padding-top: 12px;
   padding-bottom: 15px;
   margin-right: 20px;
+
+  &:hover {
+    background-color: #ecc7a8;
+  }
 
   @media only screen and (max-width: 1185px) {
     width: 120px;
@@ -270,6 +286,10 @@ const AddToBagButton = styled.button`
   width: 20%;
   background-color: white;
 
+  &:hover {
+    background-color: rgb(205, 205, 205);
+  }
+
   @media only screen and (max-width: 1185px) {
     width: 120px;
   }
@@ -285,12 +305,12 @@ const ProductInfo = () => {
     <ProductInfoContainer>
       <ProductDetails>
         <h3>Details</h3>
-        <SpaceBetweenFlex><p style={{ fontWeight: 'bold' }}>Brand</p><p>Chanel</p></SpaceBetweenFlex>
-        <SpaceBetweenFlex><p style={{ fontWeight: 'bold' }}>Model</p><p>Classic</p></SpaceBetweenFlex>
-        <SpaceBetweenFlex><p style={{ fontWeight: 'bold' }}>Condition</p><p>Good</p></SpaceBetweenFlex>
-        <SpaceBetweenFlex><p style={{ fontWeight: 'bold' }}>Color</p><p>Black</p></SpaceBetweenFlex>
-        <SpaceBetweenFlex><p style={{ fontWeight: 'bold' }}>Size</p><p>Small</p></SpaceBetweenFlex>
-        <SpaceBetweenFlex><p style={{ fontWeight: 'bold' }}>Dimensions</p><p>28 * 18 * 5 cm</p></SpaceBetweenFlex>
+        <SpaceBetweenFlex><p style={{ fontFamily: 'Montserrat-Bold' }}>Brand</p><p>Chanel</p></SpaceBetweenFlex>
+        <SpaceBetweenFlex><p style={{ fontFamily: 'Montserrat-Bold' }}>Model</p><p>Classic</p></SpaceBetweenFlex>
+        <SpaceBetweenFlex><p style={{ fontFamily: 'Montserrat-Bold' }}>Condition</p><p>Good</p></SpaceBetweenFlex>
+        <SpaceBetweenFlex><p style={{ fontFamily: 'Montserrat-Bold' }}>Color</p><p>Black</p></SpaceBetweenFlex>
+        <SpaceBetweenFlex><p style={{ fontFamily: 'Montserrat-Bold' }}>Size</p><p>Small</p></SpaceBetweenFlex>
+        <SpaceBetweenFlex><p style={{ fontFamily: 'Montserrat-Bold' }}>Dimensions</p><p>28 * 18 * 5 cm</p></SpaceBetweenFlex>
       </ProductDetails>
 
       <ProductSeller>
@@ -299,8 +319,8 @@ const ProductInfo = () => {
           <div style={{ display: 'flex', flexDirection: 'row' }}>
             <img src={UserDefaultImage} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
             <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '10px', justifyContent: 'center' }}>
-              <p>
-                <span style={{ color: '#C49235' }}><i className='fa fa-check'></i>Trusted Seller</span><br/>
+              <p style={{ fontFamily: 'Montserrat-Medium' }}>
+                <span style={{ color: '#C49235', fontFamily: 'Montserrat-Regular' }}><i className='fa fa-check'></i>Trusted Seller</span><br/>
                 @username0000012222
               </p>
             </div>
@@ -312,12 +332,12 @@ const ProductInfo = () => {
           </SellerBtns>
         </SellerInfoFlex>
 
-        <div style={{ marginTop: '20px', width: '50%' }}>
+        <SellerReviews>
           <h3>Seller Reviews</h3>
           <SpaceBetweenFlex>
             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
               <img src={UserDefaultImage} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
-              <p>@username0000012222</p>
+              <p style={{ fontFamily: 'Montserrat-Medium' }}>@username0000012222</p>
             </div>
 
             <div>
@@ -331,7 +351,7 @@ const ProductInfo = () => {
           <SpaceBetweenFlex>
             <div style={{ display: 'flex', flexDirection: 'row', marginTop: '20px', alignItems: 'center' }}>
               <img src={UserDefaultImage} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
-              <p>@username0000012222</p>
+              <p style={{ fontFamily: 'Montserrat-Medium' }}>@username0000012222</p>
             </div>
 
             <div>
@@ -342,20 +362,20 @@ const ProductInfo = () => {
               <i className='fa fa-star'></i>
             </div>
           </SpaceBetweenFlex>
-          <a href='#' style={{ float: 'right', textDecoration: 'underline' }}>See More</a>
-        </div>
+          <a href='#' style={{ float: 'right', textDecoration: 'underline', fontFamily: 'Montserrat-Medium' }}>See More</a>
+        </SellerReviews>
       </ProductSeller>
 
       <div style={{ width: '35%', marginTop: '40px' }}>
         <FlexWrapper2>
-          <p style={{ marginLeft: '20px', fontSize: '18px' }}>
+          <p style={{ marginLeft: '20px', fontSize: '18px', fontFamily: 'Montserrat-Light' }}>
             <i className='fa fa-shield'></i>
             <span style={{ marginLeft: '15px' }}>Quality Control</span>
           </p>
           <i className='fa fa-angle-right' style={{ fontSize: '30px', marginRight: '30px' }}></i>
         </FlexWrapper2>
 
-        <FlexWrapper2 style={{ marginTop: '20px' }}>
+        <FlexWrapper2 style={{ marginTop: '20px', fontSize: '18px', fontFamily: 'Montserrat-Light' }}>
           <p style={{ marginLeft: '20px' }}>
             <i className='fa fa-truck'></i>
             <span style={{ marginLeft: '15px' }}>Shipping</span>
@@ -363,7 +383,7 @@ const ProductInfo = () => {
           <i className='fa fa-angle-right' style={{ fontSize: '30px', marginRight: '30px' }}></i>
         </FlexWrapper2>
 
-        <FlexWrapper2 style={{ marginTop: '20px' }}>
+        <FlexWrapper2 style={{ marginTop: '20px', fontSize: '18px', fontFamily: 'Montserrat-Light' }}>
           <p style={{ marginLeft: '20px' }}>
             <i className='fa fa-undo'></i>
             <span style={{ marginLeft: '15px' }}>Returns</span>
@@ -391,6 +411,10 @@ const ProductInfoContainer = styled.div`
   @media only screen and (max-width: 1115px) {
     flex-direction: column;
   }
+
+  > div > h3, > div > div > h3 {
+    font-family: Montserrat-Bold;
+  }
 `;
 
 const SpaceBetweenFlex = styled.div`
@@ -407,15 +431,16 @@ const SellerInfoFlex = styled.div`
   align-items: center;
 
   @media only screen and (max-width: 1115px) {
-    width: 500px;
+    width: 400px;
   }
 `;
 
 const ProductDetails = styled.div`
   width: 35%;
+  font-family: Montserrat-Medium;
 
   @media only screen and (max-width: 1115px) {
-    width: 380px;
+    width: 400px;
   }
 `;
 
@@ -426,7 +451,16 @@ const ProductSeller = styled.div`
   @media only screen and (max-width: 1115px) {
     margin-left: 0;
     margin-top: 10px;
-    width: 650px;
+    width: 400px;
+  }
+`;
+
+const SellerReviews = styled.div`
+  margin-top: 20px;
+  width: 50%;
+
+  @media only screen and (max-width: 1115px) {
+    width: 400px;
   }
 `;
 
@@ -442,11 +476,13 @@ const SellerBtns = styled.div`
 const UnfollowButton = styled.button`
   background-color: #C6AC96;
   color: white;
-  height: 30px;
+  height: 28px;
   width: 100px;
   text-align: center;
   padding: 0;
   margin-right: 10px;
+  font-family: Montserrat-Regular;
+  font-size: 14px;
 
   @media only screen and (max-width: 600px) {
     margin-top: 5px;
@@ -456,13 +492,15 @@ const UnfollowButton = styled.button`
 const ContactButton = styled.button`
   background-color: black;
   color: white;
-  height: 30px;
+  height: 28px;
   width: 100px;
+  font-size: 14px;
   text-align: center;
   padding: 0;
+  font-family: Montserrat-Regular;
 
   &:hover {
-    color: white;
+    color: #C6AC96;
   }
 
   @media only screen and (max-width: 600px) {
@@ -479,7 +517,7 @@ const FlexWrapper2 = styled.div`
   border-radius: 7px;
 
   @media only screen and (max-width: 1115px) {
-    width: 350px;
+    width: 400px;
   }
 `;
 
@@ -488,14 +526,15 @@ const CommentContainer = styled.div`
   margin: 30px 0 0 60px;
   background-color: #EAEAEA;
   padding: 20px;
+  font-family: Montserrat-Medium;
 
   @media only screen and (max-width: 1115px) {
     margin-left: 0;
-    width: 350px;
+    width: 400px;
   }
 `;
 
-const CommentInput = styled.input`
+const CommentInput = styled.textarea`
   height: 80px;
   padding-bottom: 30px;
 `;

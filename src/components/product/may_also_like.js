@@ -21,10 +21,9 @@ const MayAlsoLike = () => {
               </div>
             </ProductFlex>
             <br/>
-            <p>
-              Rolex<br/>
-              <span>Oyster-perpetual<br/> 11,700 USD</span>
-            </p>
+            <p style={{ fontFamily: 'Montserrat-Bold', color: 'black', fontSize: '16px' }}>Rolex</p>
+            <p>Oyster-perpetual</p>
+            <p style={{ color: '#C6AC96' }}>11,700 USD</p>
             <p><img src={LocationImage} width='20px' height='20px' />Beirut</p>
           </ProductCard>
         </div>
@@ -39,12 +38,9 @@ const MayAlsoLike = () => {
               </div>
             </ProductFlex>
             <br/>
-            <p>
-              Hermes<br/>
-              <span>
-                Yellow Leather Belt<br/> 2,100 USD<br/>
-              </span>
-            </p>
+            <p style={{ fontFamily: 'Montserrat-Bold', color: 'black', fontSize: '16px' }}>Rolex</p>
+            <p>Oyster-perpetual</p>
+            <p style={{ color: '#C6AC96' }}>11,700 USD</p>
             <p><img src={LocationImage} width='20px' height='20px' />Beirut</p>
           </ProductCard>
         </div>
@@ -59,12 +55,9 @@ const MayAlsoLike = () => {
               </div>
             </ProductFlex>
             <br/>
-            <p>
-              Audemars Piguet<br/>
-              <span>
-                ROYAL OAK YELLOW<br/> 180,000 USD<br/>
-              </span>
-            </p>
+            <p style={{ fontFamily: 'Montserrat-Bold', color: 'black', fontSize: '16px' }}>Rolex</p>
+            <p>Oyster-perpetual</p>
+            <p style={{ color: '#C6AC96' }}>11,700 USD</p>
             <p><img src={LocationImage} width='20px' height='20px' />Dubai</p>
           </ProductCard>
         </div>
@@ -79,10 +72,9 @@ const MayAlsoLike = () => {
               </div>
             </ProductFlex>
             <br/>
-            <p>
-              Gucci<br/>
-              <span>Beige Canvas Wallet<br/> 370 USD</span>
-            </p>
+            <p style={{ fontFamily: 'Montserrat-Bold', color: 'black', fontSize: '16px' }}>Rolex</p>
+            <p>Oyster-perpetual</p>
+            <p style={{ color: '#C6AC96' }}>11,700 USD</p>
             <p><img src={LocationImage} width='20px' height='20px' />Beirut</p>
           </ProductCard>
         </div>
@@ -95,18 +87,21 @@ const ProductContainer = styled.div`
   background-color: #F9F9F9;
   padding: 130px 100px 100px 100px;
   margin-top: 50px;
+  font-family: Montserrat-Medium;
 `;
 
 const ProductCard = styled.div`
   background-color: white;
-  height: 370px;
+  height: 400px;
   width: 270px;
   padding-top: 20px;
   border-radius: 20px;
   text-align: center;
 
   > p {
-    line-height: 25px;
+    line-height: 14px;
+    color: #959595;
+    font-size: 14px;
   }
 
   @media only screen and (max-width: 1400px) {

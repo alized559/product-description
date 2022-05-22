@@ -6,7 +6,7 @@ const Product = () => {
   return (
     <div>
       <ProductGrid />
-      <h1 style={{ textAlign: 'center' }}>You May Also Like</h1>
+      <h1 style={{ textAlign: 'center', fontFamily: 'Montserrat-SemiBold' }}>You May Also Like</h1>
       <MayAlsoLike />
     </div>
   );

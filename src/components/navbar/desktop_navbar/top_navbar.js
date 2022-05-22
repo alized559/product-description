@@ -15,8 +15,8 @@ const TopNavbar = () => {
 
       <RightSide>
         <SellButton className="btn">Sell An Item</SellButton>
-        <button className="btn" style={{ marginLeft: '10px' }}>Sign In</button>
-        <button className="btn" style={{ marginRight: '5px' }}>Sign Up</button>
+        <AuthBtn className="btn">Sign In</AuthBtn>
+        <AuthBtn className="btn">Sign Up</AuthBtn>
         <a href='#'><img src={ShoppingBagImage} width='30px' height='30px'/></a>
       </RightSide>
     </NavbarContainer>
@@ -29,6 +29,7 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   margin: 50px 40px 50px 40px;
   align-items: center;
+  font-family: Montserrat-Light;
 `;
 
 const SearchContainer = styled.div`
@@ -60,9 +61,22 @@ const RightSide = styled.div`
 
 const SellButton = styled.button`
   background-color: #C6AC96;
-  font-weight: bold;
+  font-family: Montserrat-Bold;
   padding-left: 15px;
   padding-right: 15px;
+
+  &:hover {
+    background-color: #ecc7a8;
+  }
+`;
+
+const AuthBtn = styled.button`
+  margin-left: 10px;
+  font-family: Montserrat-Medium;
+
+  &:hover {
+    color: #C6AC96;
+  }
 `;
 
 export default TopNavbar;

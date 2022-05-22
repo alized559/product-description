@@ -70,6 +70,7 @@ const SideNav = styled.div`
   transition: 0.2s;
   padding-top: 60px;
   box-shadow: 0 1px 5px rgb(93, 93, 93);
+  font-family: Montserrat-Medium;
 
   > a:not(:first-child) {
     padding: 8px 8px 8px 20px;
@@ -79,6 +80,11 @@ const SideNav = styled.div`
     display: block;
     border-bottom: 1px solid rgb(211, 211, 211);
     cursor: pointer;
+
+    &:hover {
+      transition: 0.5s;
+      background-color: rgb(211, 211, 211);
+    }
   }
 `;
 
@@ -95,13 +101,14 @@ const Closebtn = styled.a`
   &:hover {
     text-decoration: none;
     color: black;
+    color: rgb(119, 119, 119);
+    transition: 0.5s;
   }
 `;
 
 const MyAccount = styled.p`
-  margin-left: 20px;
   text-align: center;
-  font-weight: bold;
+  font-family: Montserrat-Bold;
   text-align: center;
   margin-top: 20px;
 `;
@@ -112,6 +119,7 @@ const Signupbtn = styled.button`
   display: block;
   margin: 0 auto;
   color: black;
+  font-family: Montserrat-Bold;
 
   &:hover {
     background-color: rgb(205, 205, 205);
@@ -126,6 +134,7 @@ const Signinbtn = styled.button`
   display: block;
   margin: 0 auto;
   margin-bottom: 5px;
+  font-family: Montserrat-Bold;
 
   &:hover {
     background-color: rgb(69, 69, 69);
@@ -136,10 +145,14 @@ const SellButton = styled.button`
   width: 150px;
   background-color: #C6AC96;
   color: black !important;
-  font-weight: bold;
+  font-family: Montserrat-Bold;
   display: block;
   margin: 0 auto;
   margin-bottom: 5px;
+
+  &:hover {
+    background-color: #ecc7a8;
+  }
 `;
 
 const TopNavbar = styled.div`
