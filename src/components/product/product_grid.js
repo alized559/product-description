@@ -45,7 +45,7 @@ const Product = () => {
           <img src={ProductItem6} />
         </ProductItems>
 
-        <div style={{ margin: '20px 40px 20px 40px' }}>
+        <ProductContainer>
           <ProductIcons>
             <div>
               <i className='fa fa-heart' style={{ fontSize: '22px' }}></i>
@@ -58,8 +58,8 @@ const Product = () => {
             </div>
           </ProductIcons>
 
-          <img src={ProductItem1} width='500px' height='500px' />
-        </div>
+          <ProductImage src={ProductItem1} />
+        </ProductContainer>
 
         <RightSide>
           <PriceFlex>
@@ -93,11 +93,11 @@ const Product = () => {
 
           <OrderButton className="btn">Order</OrderButton>
 
-          <div style={{ display: 'flex', marginTop: '20px', width: '100%' }}>
+          <OptionFlex>
             <RequestToViewButton className="btn">Request To View</RequestToViewButton>
             <MakeAnOfferButton className="btn">Make An Offer</MakeAnOfferButton>
             <AddToBagButton className="btn"><img src={ShoppingBagImage} width='30px' height='30px'/></AddToBagButton>
-          </div>
+          </OptionFlex>
 
           <div style={{ display: 'flex', marginTop: '20px', fontSize: '20px' }}>
             <img src={LocationImage} width='30px' height='30px' />
@@ -113,6 +113,14 @@ const FlexWrapper = styled.div`
   display: flex;
   flex-direction: row;
   padding: 30px 0 30px 30px;
+
+  @media only screen and (max-width: 1185px) {
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 700px) {
+    justify-content: center;
+  }
 `;
 
 const ProductItems = styled.div`
@@ -131,6 +139,10 @@ const ProductItems = styled.div`
   > img:not(:nth-child(1)) {
     margin-top: 20px;
   }
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const ProductIcons = styled.div`
@@ -140,10 +152,37 @@ const ProductIcons = styled.div`
   align-items: center;
 `;
 
+const ProductContainer = styled.div`
+  margin: 20px 40px 20px 40px;
+
+  @media only screen and (max-width: 700px) {
+    margin-left: 0;
+  }
+`;
+
+const ProductImage = styled.img`
+  width: 500px;
+  height: 500px;
+
+  @media only screen and (max-width: 700px) {
+    width: 450px;
+    height: 450px;
+  }
+`;
+
 const RightSide = styled.div`
   background-color: rgba(198, 172, 150, 0.32);
   padding: 50px 100px 50px 100px;
   width: 100%;
+
+  @media only screen and (max-width: 1185px) {
+    margin-right: 30px;
+    width: 600px;
+  }
+
+  @media only screen and (max-width: 650px) {
+    width: 100%;
+  }
 `;
 
 const PriceFlex = styled.div`
@@ -168,6 +207,25 @@ const OrderButton = styled.button`
     color: white;
     background-color: #777777;
   }
+
+  @media only screen and (max-width: 1185px) {
+    width: 400px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 250px;
+    font-size: 28px;
+  }
+`;
+
+const OptionFlex = styled.div`
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+  }
 `;
 
 const RequestToViewButton = styled.button`
@@ -178,6 +236,14 @@ const RequestToViewButton = styled.button`
   padding-top: 12px;
   padding-bottom: 15px;
   margin-right: 20px;
+
+  @media only screen and (max-width: 1185px) {
+    width: 120px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    width: 250px;
+  }
 `;
 
 const MakeAnOfferButton = styled.button`
@@ -188,12 +254,30 @@ const MakeAnOfferButton = styled.button`
   padding-top: 12px;
   padding-bottom: 15px;
   margin-right: 20px;
+
+  @media only screen and (max-width: 1185px) {
+    width: 120px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    width: 250px;
+    margin-top: 10px;
+  }
 `;
 
 const AddToBagButton = styled.button`
   border-radius: 0;
   width: 20%;
   background-color: white;
+
+  @media only screen and (max-width: 1185px) {
+    width: 120px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    width: 250px;
+    margin-top: 10px;
+  }
 `;
 
 const ProductInfo = () => {
