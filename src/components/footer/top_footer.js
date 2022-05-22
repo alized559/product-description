@@ -99,6 +99,12 @@ const LinksContainer = styled.div`
     line-height: 32px;
     margin-top: 18px;
   }
+
+  @media only screen and (max-width: 950px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const VerticalLine = styled.div`
@@ -128,6 +134,16 @@ const FooterBotFlex = styled.div`
     color: #737171;
     padding-right: 15px;
   }
+
+  @media only screen and (max-width: 1190px) {
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: 735px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const FooterBotFlexItem = styled.div`
@@ -143,6 +159,12 @@ const FooterBotFlexItem = styled.div`
 
   > a > img:first-child {
     margin-right: 40px;
+  }
+
+  @media only screen and (max-width: 735px) {
+    > a > img:first-child {
+      margin-right: 10px;
+    }
   }
 `;
 

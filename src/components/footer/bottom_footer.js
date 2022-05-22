@@ -24,6 +24,10 @@ const FooterContainer = styled.div`
   padding: 20px 100px 20px 100px;
   color: #909090;
   line-height: 20px;
+
+  @media only screen and (max-width: 735px) {
+    padding: 30px;
+  }
 `;
 
 const PaymentFlex = styled.div`
