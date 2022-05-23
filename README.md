@@ -36,7 +36,7 @@ npm i font-awesome
 ```
 
 ## Styling
-I used bootstrap style for some components like buttons, and styled-components package. Which let you to use css inside js file for example:
+I used bootstrap4.5.2 framework for some components like buttons, and styled-components package. Which let you to use css inside js file for example:
 ```
 const Button = styled.button`
   color: grey;
