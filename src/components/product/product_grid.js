@@ -545,7 +545,7 @@ const ReturnContainer = styled.div`
 `;
 
 const SellerBtns = styled.div`
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1115px) {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -564,7 +564,7 @@ const UnfollowButton = styled.button`
   font-size: 14px;
   font-family: Montserrat-Regular;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1115px) {
     margin-top: 5px;
   }
 `;
@@ -583,7 +583,7 @@ const ContactButton = styled.button`
     color: #C6AC96;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1115px) {
     margin-top: 5px;
   }
 `;

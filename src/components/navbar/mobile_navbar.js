@@ -1,10 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import Logo from '../../images/logo.png';
 import ShoppingBagImage from '../../images/cart.png';
 
 const MobileNavbar = () => {
   const navbar = useRef(null);
+  const search = useRef(null);
+
+  useEffect(() => {
+    search.current.style.display = 'none';
+  }, []);
   
   const openNav = () => {
     navbar.current.style.width = '250px';
@@ -12,6 +17,14 @@ const MobileNavbar = () => {
 
   const closeNav = () => {
     navbar.current.style.width = '';
+  };
+
+  const toggleSearch = () => {
+    if (search.current.style.display == 'block') {
+      search.current.style.display = 'none';
+    } else {
+      search.current.style.display = 'block';
+    }
   };
   
   return (
@@ -49,10 +62,15 @@ const MobileNavbar = () => {
           <div>
             <a href='#'><img src={Logo} width='170px' height='40px' /></a>
           </div>
-          <div style={{ marginLeft: 'auto' }}>
+          <RightSide>
+            <i className='fa fa-search' aria onClick={toggleSearch}></i>
             <a href="#" style={{ textDecoration: 'none' }}><img src={ShoppingBagImage} width='30px' height='30px'/></a>
-          </div>
+          </RightSide>
         </TopNavbar>
+
+        <SearchContainer ref={search}>
+          <SearchInput placeholder='Search by brand, category, item...' />
+        </SearchContainer>
       </div>
     </div>
   );
@@ -165,6 +183,41 @@ const TopNavbar = styled.div`
   > span {
     margin-right: auto;
   }
+`;
+
+const RightSide = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+
+  > i {
+    margin-right: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+`;
+
+const SearchContainer = styled.div`
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid #E3E3E3;
+  margin: 5px 0 5px 0;
+`;
+
+const SearchInput = styled.input`
+  height: 30px;
+  width: 100%;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #808080;
 `;
 
 export default MobileNavbar;

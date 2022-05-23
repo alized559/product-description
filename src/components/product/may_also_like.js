@@ -17,7 +17,7 @@ const MayAlsoLike = () => {
               <ProductFlex>
                 <img src={ClockImage} width='160px' height='200px' />
                 <div>
-                  <i className='fa fa-heart' style={{ fontSize: '22px', marginRight: '5px' }}></i>
+                  <i className='fa fa-heart-o' style={{ fontSize: '22px', marginRight: '5px' }}></i>
                   <i className='fa fa-bookmark-o' style={{ fontSize: '22px' }}></i>
                 </div>
               </ProductFlex>
@@ -36,7 +36,7 @@ const MayAlsoLike = () => {
               <ProductFlex>
                 <img src={Image} width='160px' height='200px' />
                 <div>
-                  <i className='fa fa-heart' style={{ fontSize: '22px', marginRight: '5px' }}></i>
+                  <i className='fa fa-heart-o' style={{ fontSize: '22px', marginRight: '5px' }}></i>
                   <i className='fa fa-bookmark-o' style={{ fontSize: '22px' }}></i>
                 </div>
               </ProductFlex>
@@ -55,7 +55,7 @@ const MayAlsoLike = () => {
               <ProductFlex>
                 <img src={ClockImage1} width='160px' height='200px' />
                 <div>
-                  <i className='fa fa-heart' style={{ fontSize: '22px', marginRight: '5px' }}></i>
+                  <i className='fa fa-heart-o' style={{ fontSize: '22px', marginRight: '5px' }}></i>
                   <i className='fa fa-bookmark-o' style={{ fontSize: '22px' }}></i>
                 </div>
               </ProductFlex>
@@ -74,7 +74,7 @@ const MayAlsoLike = () => {
               <ProductFlex>
                 <img src={WalletImage} width='160px' height='200px' />
                 <div>
-                  <i className='fa fa-heart' style={{ fontSize: '22px', marginRight: '5px' }}></i>
+                  <i className='fa fa-heart-o' style={{ fontSize: '22px', marginRight: '5px' }}></i>
                   <i className='fa fa-bookmark-o' style={{ fontSize: '22px' }}></i>
                 </div>
               </ProductFlex>
