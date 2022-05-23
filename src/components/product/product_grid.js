@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import ProductItem1 from '../../images/product/product1/product-item1.png';
-import ProductItem2 from '../../images/product/product1/product-item2.png';
-import ProductItem3 from '../../images/product/product1/product-item3.png';
-import ProductItem4 from '../../images/product/product1/product-item4.png';
-import ProductItem5 from '../../images/product/product1/product-item5.png';
-import ProductItem6 from '../../images/product/product1/product-item6.png';
-import ShoppingBagImage from '../../images/cart.png';
-import LocationImage from '../../images/location.png';
-import UserDefaultImage from '../../images/user-default-img.png';
 import PropTypes from 'prop-types';
 import { productItems } from './product_items';
+import ShoppingBagImage from '../../images/cart.png';
+import LocationImage from '../../images/location.png';
+import UserImage from '../../images/user-default-img.png';
+import Badge from '../../images/badge.png';
 
 const ProductGrid = () => {
   return (
@@ -62,7 +57,7 @@ const Product = props => {
         <ProductContainer>
           <ProductIcons>
             <div>
-              <i className='fa fa-heart' style={{ fontSize: '22px' }}></i>
+              <i className='fa fa-heart-o' style={{ fontSize: '22px' }}></i>
             </div>
 
             <div>
@@ -79,12 +74,12 @@ const Product = props => {
           <PriceFlex>
             <div>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <s><p style={{ fontFamily: 'Montserrat-Bold', fontSize: '22px', marginRight: '7px' }}>$2100</p></s>
-                <p style={{ fontFamily: 'Montserrat-Regular', fontSize: '18px', marginRight: '7px', color: '#DD0000' }}>$1900</p>
-                <p style={{ fontFamily: 'Montserrat-Light', fontSize: '10px', color: '#146900' }}>-70%</p>
+                <s><ProductPrice>$2100</ProductPrice></s>
+                <ProductSale>$1900</ProductSale>
+                <ProductDiscount>-70%</ProductDiscount>
               </div>
 
-              <p style={{ color: '#777777', fontSize: '14px', fontFamily: 'Montserrat-Regular' }}>Estimated retail price $2,000</p>
+              <EstimatedPrice>Estimated retail price $2,000</EstimatedPrice>
             </div>
 
             <div>
@@ -92,12 +87,14 @@ const Product = props => {
             </div>
           </PriceFlex>
 
-          <p style={{ lineHeight: '18px', fontFamily: 'Montserrat-Medium' }}>
-            <i className='fa fa-id-badge' style={{ height: '100%' }}></i>
-            +15 USD Control and authentication<br/>
-            Physical control and authentication<br/>
-            by our experts. <a href='#' style={{ color: 'inherit', textDecoration: 'underline' }}>Learn more</a>
-          </p>
+          <AuthText>
+            <img src={Badge} width='50px' height='60px' />
+            <span>
+              +15 USD Control and authentication<br/>
+              Physical control and authentication<br/>
+              by our experts. <a href='#' style={{ color: 'inherit', textDecoration: 'underline' }}>Learn more</a>
+            </span>
+          </AuthText>
           
           <p style={{ lineHeight: '18px', fontFamily: 'Montserrat-Medium' }}>
             Good Condition<br/>
@@ -113,7 +110,7 @@ const Product = props => {
             <AddToBagButton className="btn"><img src={ShoppingBagImage} width='30px' height='30px'/></AddToBagButton>
           </OptionFlex>
 
-          <div style={{ display: 'flex', marginTop: '20px', fontSize: '18px', fontFamily: 'Montserrat-Medium' }}>
+          <div style={{ display: 'flex', marginTop: '20px', fontSize: '18px', fontFamily: 'Montserrat-Medium' }}> {}
             <img src={LocationImage} width='30px' height='30px' />
             <p>Beirut, Lebanon</p>
           </div>
@@ -168,6 +165,10 @@ const ProductIcons = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  > div > i {
+    cursor: pointer;
+  }
 `;
 
 const ProductContainer = styled.div`
@@ -189,13 +190,13 @@ const ProductImage = styled.img`
 `;
 
 const RightSide = styled.div`
+  width: 100%;
   background-color: rgba(198, 172, 150, 0.32);
   padding: 50px 100px 50px 100px;
-  width: 100%;
 
   @media only screen and (max-width: 1185px) {
-    margin-right: 30px;
     width: 600px;
+    margin-right: 30px;
   }
 
   @media only screen and (max-width: 650px) {
@@ -210,14 +211,47 @@ const PriceFlex = styled.div`
   align-items: center;
 `;
 
+const ProductPrice = styled.p`
+  font-size: 22px;
+  font-family: Montserrat-Bold;
+  margin-right: 7px;
+`;
+
+const ProductSale = styled.p`
+  color: #DD0000;
+  font-size: 18px;
+  font-family: Montserrat-Regular;
+  margin-right: 7px;
+`;
+
+const ProductDiscount = styled.p`
+  color: #146900;
+  font-size: 10px;
+  font-family: Montserrat-Light;
+`;
+
+const EstimatedPrice = styled.p`
+  color: #777777;
+  font-size: 14px;
+  font-family: Montserrat-Regular;
+`;
+
+const AuthText = styled.p`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 18px;
+  font-family: Montserrat-Medium;
+`;
+
 const OrderButton = styled.button`
   width: 100%;
+  color: white;
   background-color: black;
   margin-top: 20px;
-  border-radius: 0;
-  color: white;
   padding-top: 10px;
   padding-bottom: 10px;
+  border-radius: 0;
   font-size: 32px;
   font-family: Montserrat-Bold;
 
@@ -237,9 +271,9 @@ const OrderButton = styled.button`
 `;
 
 const OptionFlex = styled.div`
+  width: 100%;
   display: flex;
   margin-top: 20px;
-  width: 100%;
 
   @media only screen and (max-width: 550px) {
     flex-direction: column;
@@ -248,13 +282,13 @@ const OptionFlex = styled.div`
 
 const RequestToViewButton = styled.button`
   width: 30%;
-  border-radius: 0;
-  font-family: Montserrat-Bold;
   background-color: white;
+  border-radius: 0;
+  margin-right: 20px;
   padding-top: 12px;
   padding-bottom: 15px;
-  margin-right: 20px;
   font-size: 14px;
+  font-family: Montserrat-Bold;
 
   &:hover {
     background-color: rgb(205, 205, 205);
@@ -271,12 +305,12 @@ const RequestToViewButton = styled.button`
 
 const MakeAnOfferButton = styled.button`
   width: 50%;
-  border-radius: 0;
-  font-family: Montserrat-Bold;
   background-color: #C6AC96;
+  border-radius: 0;
+  margin-right: 20px;
   padding-top: 12px;
   padding-bottom: 15px;
-  margin-right: 20px;
+  font-family: Montserrat-Bold;
 
   &:hover {
     background-color: #ecc7a8;
@@ -293,9 +327,9 @@ const MakeAnOfferButton = styled.button`
 `;
 
 const AddToBagButton = styled.button`
-  border-radius: 0;
   width: 20%;
   background-color: white;
+  border-radius: 0;
 
   &:hover {
     background-color: rgb(205, 205, 205);
@@ -328,13 +362,13 @@ const ProductInfo = () => {
         <h3>Seller</h3>
         <SellerInfoFlex>
           <div style={{ display: 'flex', flexDirection: 'row' }}>
-            <img src={UserDefaultImage} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
-            <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '10px', justifyContent: 'center' }}>
+            <UserDefaultImage src={UserImage} />
+            <UserInfo>
               <p style={{ fontFamily: 'Montserrat-Medium' }}>
                 <span style={{ color: '#C49235', fontFamily: 'Montserrat-Regular' }}><i className='fa fa-check'></i>Trusted Seller</span><br/>
                 @username0000012222
               </p>
-            </div>
+            </UserInfo>
           </div>
 
           <SellerBtns>
@@ -346,8 +380,8 @@ const ProductInfo = () => {
         <SellerReviews>
           <h3>Seller Reviews</h3>
           <SpaceBetweenFlex>
-            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-              <img src={UserDefaultImage} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
+            <div style={{ display: 'flex', flexDirection: 'row', marginTop: '20px', alignItems: 'center' }}>
+              <UserDefaultImage src={UserImage}/>
               <p style={{ fontFamily: 'Montserrat-Medium' }}>@username0000012222</p>
             </div>
 
@@ -361,7 +395,7 @@ const ProductInfo = () => {
           </SpaceBetweenFlex>
           <SpaceBetweenFlex>
             <div style={{ display: 'flex', flexDirection: 'row', marginTop: '20px', alignItems: 'center' }}>
-              <img src={UserDefaultImage} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
+              <UserDefaultImage src={UserImage} />
               <p style={{ fontFamily: 'Montserrat-Medium' }}>@username0000012222</p>
             </div>
 
@@ -373,35 +407,41 @@ const ProductInfo = () => {
               <i className='fa fa-star'></i>
             </div>
           </SpaceBetweenFlex>
-          <a href='#' style={{ float: 'right', textDecoration: 'underline', fontFamily: 'Montserrat-Medium' }}>See More</a>
+          <SeeMoreLink href='#'>See More</SeeMoreLink>
         </SellerReviews>
       </ProductSeller>
 
-      <div style={{ width: '35%', marginTop: '40px' }}>
-        <FlexWrapper2>
-          <p style={{ marginLeft: '20px', fontSize: '18px', fontFamily: 'Montserrat-Light' }}>
-            <i className='fa fa-shield'></i>
-            <span style={{ marginLeft: '15px' }}>Quality Control</span>
-          </p>
-          <i className='fa fa-angle-right' style={{ fontSize: '30px', marginRight: '30px' }}></i>
-        </FlexWrapper2>
+      <ReturnContainer>
+        <a href='#'>
+          <FlexWrapper2 style={{ marginTop: '40px' }}>
+            <div style={{ marginLeft: '20px', fontSize: '18px', fontFamily: 'Montserrat-Light' }}>
+              <i className='fa fa-shield'></i>
+              <span style={{ marginLeft: '15px' }}>Quality Control</span>
+            </div>
+            <i className='fa fa-angle-right' style={{ fontSize: '30px', marginRight: '30px' }}></i>
+          </FlexWrapper2>
+        </a>
 
-        <FlexWrapper2 style={{ marginTop: '20px', fontSize: '18px', fontFamily: 'Montserrat-Light' }}>
-          <p style={{ marginLeft: '20px' }}>
-            <i className='fa fa-truck'></i>
-            <span style={{ marginLeft: '15px' }}>Shipping</span>
-          </p>
-          <i className='fa fa-angle-right' style={{ fontSize: '30px', marginRight: '30px' }}></i>
-        </FlexWrapper2>
+        <a href='#'>
+          <FlexWrapper2>
+            <div style={{ marginLeft: '20px', fontSize: '18px', fontFamily: 'Montserrat-Light' }}>
+              <i className='fa fa-truck'></i>
+              <span style={{ marginLeft: '15px' }}>Shipping</span>
+            </div>
+            <i className='fa fa-angle-right' style={{ fontSize: '30px', marginRight: '30px' }}></i>
+          </FlexWrapper2>
+        </a>
 
-        <FlexWrapper2 style={{ marginTop: '20px', fontSize: '18px', fontFamily: 'Montserrat-Light' }}>
-          <p style={{ marginLeft: '20px' }}>
-            <i className='fa fa-undo'></i>
-            <span style={{ marginLeft: '15px' }}>Returns</span>
-          </p>
-          <i className='fa fa-angle-right' style={{ fontSize: '30px', marginRight: '30px' }}></i>
-        </FlexWrapper2>
-      </div>
+        <a href='#'>
+          <FlexWrapper2>
+            <div style={{ marginLeft: '20px', fontSize: '18px', fontFamily: 'Montserrat-Light' }}>
+              <i className='fa fa-undo'></i>
+              <span style={{ marginLeft: '15px' }}>Returns</span>
+            </div>
+            <i className='fa fa-angle-right' style={{ fontSize: '30px', marginRight: '30px' }}></i>
+          </FlexWrapper2>
+        </a>
+      </ReturnContainer>
 
       <CommentContainer>
         <p>Leave a comment for the seller </p>
@@ -413,14 +453,15 @@ const ProductInfo = () => {
 };
 
 const ProductInfoContainer = styled.div`
-  padding: 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 40px;
+  padding: 50px;
 
   @media only screen and (max-width: 1115px) {
     flex-direction: column;
+    padding: 40px;
   }
 
   > div > h3, > div > div > h3 {
@@ -435,6 +476,12 @@ const SpaceBetweenFlex = styled.div`
   align-items: center;
 `;
 
+const SeeMoreLink = styled.a`
+  float: right;
+  text-decoration: underline;
+  font-family: Montserrat-Medium;
+`;
+
 const SellerInfoFlex = styled.div`
   display: flex;
   flex-direction: row;
@@ -444,6 +491,19 @@ const SellerInfoFlex = styled.div`
   @media only screen and (max-width: 1115px) {
     width: 400px;
   }
+`;
+
+const UserDefaultImage = styled.img`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+`;
+
+const UserInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
 `;
 
 const ProductDetails = styled.div`
@@ -456,44 +516,53 @@ const ProductDetails = styled.div`
 `;
 
 const ProductSeller = styled.div`
-  margin-left: 50px;
   width: 60%;
+  margin-left: 50px;
 
   @media only screen and (max-width: 1115px) {
+    width: 400px;
     margin-left: 0;
     margin-top: 10px;
-    width: 400px;
   }
 `;
 
 const SellerReviews = styled.div`
-  margin-top: 20px;
   width: 50%;
+  margin-top: 20px;
 
   @media only screen and (max-width: 1115px) {
     width: 400px;
+  }
+`;
+
+const ReturnContainer = styled.div`
+  width: 35%;
+
+  > a {
+    color: inherit;
+    text-decoration: none;
   }
 `;
 
 const SellerBtns = styled.div`
   @media only screen and (max-width: 600px) {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
     margin-left: 50px;
   }
 `;
 
 const UnfollowButton = styled.button`
-  background-color: #C6AC96;
-  color: white;
   height: 28px;
   width: 100px;
+  color: white;
+  background-color: #C6AC96;
   text-align: center;
-  padding: 0;
   margin-right: 10px;
-  font-family: Montserrat-Regular;
+  padding: 0;
   font-size: 14px;
+  font-family: Montserrat-Regular;
 
   @media only screen and (max-width: 600px) {
     margin-top: 5px;
@@ -501,13 +570,13 @@ const UnfollowButton = styled.button`
 `;
 
 const ContactButton = styled.button`
-  background-color: black;
-  color: white;
   height: 28px;
   width: 100px;
-  font-size: 14px;
+  color: white;
+  background-color: black;
   text-align: center;
   padding: 0;
+  font-size: 14px;
   font-family: Montserrat-Regular;
 
   &:hover {
@@ -526,6 +595,7 @@ const FlexWrapper2 = styled.div`
   align-items: center;
   background-color: #EAEAEA;
   border-radius: 7px;
+  margin-top: 20px;
 
   @media only screen and (max-width: 1115px) {
     width: 400px;
@@ -534,8 +604,8 @@ const FlexWrapper2 = styled.div`
 
 const CommentContainer = styled.div`
   width: 55%;
-  margin: 30px 0 0 60px;
   background-color: #EAEAEA;
+  margin: 30px 0 0 60px;
   padding: 20px;
   font-family: Montserrat-Medium;
 
@@ -555,9 +625,9 @@ const CommentButton = styled.button`
   width: 100px;
   float: right;
   text-align: center;
-  padding: 0;
   background-color: white;
   margin-top: 10px;
+  padding: 0;
 `;
 
 export default ProductGrid;

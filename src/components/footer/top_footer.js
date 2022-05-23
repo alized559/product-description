@@ -64,9 +64,9 @@ const TopFooter = () => {
             <p><a href='#'>Terms and Conditions</a></p>
             <p><a href='#'>Privacy Policy & Cookies</a></p>
             <p><a href='#'>Partners</a></p>
-            <a><i className='fa fa-twitter-square'></i></a>
-            <a><i className='fa fa-facebook-square'></i></a>
-            <a><i className='fa fa-instagram'></i></a>
+            <a href='#'><i className='fa fa-twitter-square'></i></a>
+            <a href='#'><i className='fa fa-facebook-square'></i></a>
+            <a href='#'><i className='fa fa-instagram'></i></a>
           </FooterBotFlexItem>
 
           <FooterBotFlexItem>
@@ -125,6 +125,7 @@ const FooterBot = styled.div`
 
   > p {
     color: #e4e3e3;
+    cursor: pointer;
   }
 `;
 

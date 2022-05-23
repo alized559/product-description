@@ -59,8 +59,8 @@ const MobileNavbar = () => {
 };
 
 const SideNav = styled.div`
-  height: 100%;
   width: 0;
+  height: 100%;
   position: fixed;
   z-index: 1;
   top: 0;

@@ -12,71 +12,79 @@ const MayAlsoLike = () => {
     <ProductContainer className='container-fluid'>
       <div className='row'>
         <div className='col'>
-          <ProductCard>
-            <ProductFlex>
-              <img src={ClockImage} width='160px' height='200px' />
-              <div>
-                <i className='fa fa-heart' style={{ fontSize: '22px', marginRight: '5px' }}></i>
-                <i className='fa fa-bookmark-o' style={{ fontSize: '22px' }}></i>
-              </div>
-            </ProductFlex>
-            <br/>
-            <p style={{ fontFamily: 'Montserrat-Bold', color: 'black', fontSize: '16px' }}>Rolex</p>
-            <p>Oyster-perpetual</p>
-            <p style={{ color: '#C6AC96' }}>11,700 USD</p>
-            <p><img src={LocationImage} width='20px' height='20px' />Beirut</p>
-          </ProductCard>
+          <a href='#'>
+            <ProductCard>
+              <ProductFlex>
+                <img src={ClockImage} width='160px' height='200px' />
+                <div>
+                  <i className='fa fa-heart' style={{ fontSize: '22px', marginRight: '5px' }}></i>
+                  <i className='fa fa-bookmark-o' style={{ fontSize: '22px' }}></i>
+                </div>
+              </ProductFlex>
+              <br/>
+              <p style={{ fontFamily: 'Montserrat-Bold', color: 'black', fontSize: '16px' }}>Rolex</p>
+              <p>Oyster-perpetual</p>
+              <p style={{ color: '#C6AC96' }}>11,700 USD</p>
+              <p><img src={LocationImage} width='20px' height='20px' />Beirut</p>
+            </ProductCard>
+          </a>
         </div>
 
         <div className='col'>
-          <ProductCard>
-            <ProductFlex>
-              <img src={Image} width='160px' height='200px' />
-              <div>
-                <i className='fa fa-heart' style={{ fontSize: '22px', marginRight: '5px' }}></i>
-                <i className='fa fa-bookmark-o' style={{ fontSize: '22px' }}></i>
-              </div>
-            </ProductFlex>
-            <br/>
-            <p style={{ fontFamily: 'Montserrat-Bold', color: 'black', fontSize: '16px' }}>Rolex</p>
-            <p>Oyster-perpetual</p>
-            <p style={{ color: '#C6AC96' }}>11,700 USD</p>
-            <p><img src={LocationImage} width='20px' height='20px' />Beirut</p>
-          </ProductCard>
+          <a href='#'>
+            <ProductCard>
+              <ProductFlex>
+                <img src={Image} width='160px' height='200px' />
+                <div>
+                  <i className='fa fa-heart' style={{ fontSize: '22px', marginRight: '5px' }}></i>
+                  <i className='fa fa-bookmark-o' style={{ fontSize: '22px' }}></i>
+                </div>
+              </ProductFlex>
+              <br/>
+              <p style={{ fontFamily: 'Montserrat-Bold', color: 'black', fontSize: '16px' }}>Rolex</p>
+              <p>Oyster-perpetual</p>
+              <p style={{ color: '#C6AC96' }}>11,700 USD</p>
+              <p><img src={LocationImage} width='20px' height='20px' />Beirut</p>
+            </ProductCard>
+          </a>
         </div>
 
         <div className='col'>
-          <ProductCard>
-            <ProductFlex>
-              <img src={ClockImage1} width='160px' height='200px' />
-              <div>
-                <i className='fa fa-heart' style={{ fontSize: '22px', marginRight: '5px' }}></i>
-                <i className='fa fa-bookmark-o' style={{ fontSize: '22px' }}></i>
-              </div>
-            </ProductFlex>
-            <br/>
-            <p style={{ fontFamily: 'Montserrat-Bold', color: 'black', fontSize: '16px' }}>Rolex</p>
-            <p>Oyster-perpetual</p>
-            <p style={{ color: '#C6AC96' }}>11,700 USD</p>
-            <p><img src={LocationImage} width='20px' height='20px' />Dubai</p>
-          </ProductCard>
+          <a href='#'>
+            <ProductCard>
+              <ProductFlex>
+                <img src={ClockImage1} width='160px' height='200px' />
+                <div>
+                  <i className='fa fa-heart' style={{ fontSize: '22px', marginRight: '5px' }}></i>
+                  <i className='fa fa-bookmark-o' style={{ fontSize: '22px' }}></i>
+                </div>
+              </ProductFlex>
+              <br/>
+              <p style={{ fontFamily: 'Montserrat-Bold', color: 'black', fontSize: '16px' }}>Rolex</p>
+              <p>Oyster-perpetual</p>
+              <p style={{ color: '#C6AC96' }}>11,700 USD</p>
+              <p><img src={LocationImage} width='20px' height='20px' />Dubai</p>
+            </ProductCard>
+          </a>
         </div>
 
         <div className='col'>
-          <ProductCard>
-            <ProductFlex>
-              <img src={WalletImage} width='160px' height='200px' />
-              <div>
-                <i className='fa fa-heart' style={{ fontSize: '22px', marginRight: '5px' }}></i>
-                <i className='fa fa-bookmark-o' style={{ fontSize: '22px' }}></i>
-              </div>
-            </ProductFlex>
-            <br/>
-            <p style={{ fontFamily: 'Montserrat-Bold', color: 'black', fontSize: '16px' }}>Rolex</p>
-            <p>Oyster-perpetual</p>
-            <p style={{ color: '#C6AC96' }}>11,700 USD</p>
-            <p><img src={LocationImage} width='20px' height='20px' />Beirut</p>
-          </ProductCard>
+          <a href='#'>
+            <ProductCard>
+              <ProductFlex>
+                <img src={WalletImage} width='160px' height='200px' />
+                <div>
+                  <i className='fa fa-heart' style={{ fontSize: '22px', marginRight: '5px' }}></i>
+                  <i className='fa fa-bookmark-o' style={{ fontSize: '22px' }}></i>
+                </div>
+              </ProductFlex>
+              <br/>
+              <p style={{ fontFamily: 'Montserrat-Bold', color: 'black', fontSize: '16px' }}>Rolex</p>
+              <p>Oyster-perpetual</p>
+              <p style={{ color: '#C6AC96' }}>11,700 USD</p>
+              <p><img src={LocationImage} width='20px' height='20px' />Beirut</p>
+            </ProductCard>
+          </a>
         </div>
       </div>
     </ProductContainer>
@@ -88,6 +96,15 @@ const ProductContainer = styled.div`
   padding: 130px 100px 100px 100px;
   margin-top: 50px;
   font-family: Montserrat-Medium;
+
+  > div > div > a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
 `;
 
 const ProductCard = styled.div`
