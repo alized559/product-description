@@ -47,6 +47,10 @@ const CopyRight = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin-top: 20px;
+
+  @media only screen and (max-width: 550px) {
+    font-size: 14px;
+  }
 `;
 
 export default BottomFooter;

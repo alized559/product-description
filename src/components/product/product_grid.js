@@ -71,49 +71,51 @@ const Product = props => {
         </ProductContainer>
 
         <RightSide>
-          <PriceFlex>
-            <div>
-              <div style={{ display: 'flex', alignItems: 'center' }}>
-                <s><ProductPrice>$2100</ProductPrice></s>
-                <ProductSale>$1900</ProductSale>
-                <ProductDiscount>-70%</ProductDiscount>
+          <CenterContainer>
+            <PriceFlex>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <s><ProductPrice>$2100</ProductPrice></s>
+                  <ProductSale>$1900</ProductSale>
+                  <ProductDiscount>-70%</ProductDiscount>
+                </div>
+
+                <EstimatedPrice>Estimated retail price $2,000</EstimatedPrice>
               </div>
 
-              <EstimatedPrice>Estimated retail price $2,000</EstimatedPrice>
+              <div>
+                <p style={{ color: '#C49235', fontFamily: 'Montserrat-Regular' }}><i className='fa fa-check'></i> Trusted Seller</p>
+              </div>
+            </PriceFlex>
+
+            <AuthText>
+              <img src={Badge} width='50px' height='60px' />
+              <span>
+                +15 USD Control and authentication<br/>
+                Physical control and authentication<br/>
+                by our experts. <a href='#' style={{ color: 'inherit', textDecoration: 'underline' }}>Learn more</a>
+              </span>
+            </AuthText>
+            
+            <p style={{ lineHeight: '18px', fontFamily: 'Montserrat-Medium' }}>
+              Good Condition<br/>
+              Brown Leather<br/>
+              Classic LV leather, no scratches
+            </p>
+
+            <OrderButton className="btn">Order</OrderButton>
+
+            <OptionFlex>
+              <RequestToViewButton className="btn">Request To View</RequestToViewButton>
+              <MakeAnOfferButton className="btn">Make An Offer</MakeAnOfferButton>
+              <AddToBagButton className="btn"><img src={ShoppingBagImage} width='30px' height='30px'/></AddToBagButton>
+            </OptionFlex>
+
+            <div style={{ display: 'flex', marginTop: '20px', fontSize: '18px', fontFamily: 'Montserrat-Medium' }}> {}
+              <img src={LocationImage} width='30px' height='30px' />
+              <p>Beirut, Lebanon</p>
             </div>
-
-            <div>
-              <p style={{ color: '#C49235', fontFamily: 'Montserrat-Regular' }}><i className='fa fa-check'></i> Trusted Seller</p>
-            </div>
-          </PriceFlex>
-
-          <AuthText>
-            <img src={Badge} width='50px' height='60px' />
-            <span>
-              +15 USD Control and authentication<br/>
-              Physical control and authentication<br/>
-              by our experts. <a href='#' style={{ color: 'inherit', textDecoration: 'underline' }}>Learn more</a>
-            </span>
-          </AuthText>
-          
-          <p style={{ lineHeight: '18px', fontFamily: 'Montserrat-Medium' }}>
-            Good Condition<br/>
-            Brown Leather<br/>
-            Classic LV leather, no scratches
-          </p>
-
-          <OrderButton className="btn">Order</OrderButton>
-
-          <OptionFlex>
-            <RequestToViewButton className="btn">Request To View</RequestToViewButton>
-            <MakeAnOfferButton className="btn">Make An Offer</MakeAnOfferButton>
-            <AddToBagButton className="btn"><img src={ShoppingBagImage} width='30px' height='30px'/></AddToBagButton>
-          </OptionFlex>
-
-          <div style={{ display: 'flex', marginTop: '20px', fontSize: '18px', fontFamily: 'Montserrat-Medium' }}> {}
-            <img src={LocationImage} width='30px' height='30px' />
-            <p>Beirut, Lebanon</p>
-          </div>
+          </CenterContainer>
         </RightSide>        
       </FlexWrapper>
     </div>
@@ -184,15 +186,14 @@ const ProductImage = styled.img`
   height: 500px;
 
   @media only screen and (max-width: 700px) {
-    width: 450px;
-    height: 450px;
+    width: 300px;
+    height: 300px;
   }
 `;
 
 const RightSide = styled.div`
   width: 100%;
   background-color: rgba(198, 172, 150, 0.32);
-  padding: 50px 100px 50px 100px;
 
   @media only screen and (max-width: 1185px) {
     width: 600px;
@@ -202,6 +203,12 @@ const RightSide = styled.div`
   @media only screen and (max-width: 650px) {
     width: 100%;
   }
+`;
+
+const CenterContainer = styled.div`
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
 `;
 
 const PriceFlex = styled.div`
@@ -261,12 +268,12 @@ const OrderButton = styled.button`
   }
 
   @media only screen and (max-width: 1185px) {
-    width: 400px;
+    width: 100%;
+    margin: auto;
   }
 
   @media only screen and (max-width: 600px) {
-    width: 250px;
-    font-size: 28px;
+    font-size: 26px;
   }
 `;
 
@@ -299,7 +306,8 @@ const RequestToViewButton = styled.button`
   }
 
   @media only screen and (max-width: 550px) {
-    width: 250px;
+    width: 100%;
+    margin: auto;
   }
 `;
 
@@ -317,11 +325,12 @@ const MakeAnOfferButton = styled.button`
   }
 
   @media only screen and (max-width: 1185px) {
-    width: 120px;
+    width: 150px;
   }
 
   @media only screen and (max-width: 550px) {
-    width: 250px;
+    width: 100%;
+    margin: auto;
     margin-top: 10px;
   }
 `;
@@ -340,7 +349,8 @@ const AddToBagButton = styled.button`
   }
 
   @media only screen and (max-width: 550px) {
-    width: 250px;
+    width: 100%;
+    margin: auto;
     margin-top: 10px;
   }
 `;
@@ -379,7 +389,7 @@ const ProductInfo = () => {
 
         <SellerReviews>
           <h3>Seller Reviews</h3>
-          <SpaceBetweenFlex>
+          <SellerReviewsFlex>
             <div style={{ display: 'flex', flexDirection: 'row', marginTop: '20px', alignItems: 'center' }}>
               <UserDefaultImage src={UserImage}/>
               <p style={{ fontFamily: 'Montserrat-Medium' }}>@username0000012222</p>
@@ -392,8 +402,8 @@ const ProductInfo = () => {
               <i className='fa fa-star'></i>
               <i className='fa fa-star'></i>
             </div>
-          </SpaceBetweenFlex>
-          <SpaceBetweenFlex>
+          </SellerReviewsFlex>
+          <SellerReviewsFlex>
             <div style={{ display: 'flex', flexDirection: 'row', marginTop: '20px', alignItems: 'center' }}>
               <UserDefaultImage src={UserImage} />
               <p style={{ fontFamily: 'Montserrat-Medium' }}>@username0000012222</p>
@@ -406,7 +416,7 @@ const ProductInfo = () => {
               <i className='fa fa-star'></i>
               <i className='fa fa-star'></i>
             </div>
-          </SpaceBetweenFlex>
+          </SellerReviewsFlex>
           <SeeMoreLink href='#'>See More</SeeMoreLink>
         </SellerReviews>
       </ProductSeller>
@@ -491,6 +501,13 @@ const SellerInfoFlex = styled.div`
   @media only screen and (max-width: 1115px) {
     width: 400px;
   }
+
+  @media only screen and (max-width: 550px) {
+    width: 60%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const UserDefaultImage = styled.img`
@@ -513,6 +530,10 @@ const ProductDetails = styled.div`
   @media only screen and (max-width: 1115px) {
     width: 400px;
   }
+
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+  }
 `;
 
 const ProductSeller = styled.div`
@@ -524,14 +545,34 @@ const ProductSeller = styled.div`
     margin-left: 0;
     margin-top: 10px;
   }
+
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+  }
 `;
 
 const SellerReviews = styled.div`
   width: 50%;
   margin-top: 20px;
 
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+  }
+`;
+
+const SellerReviewsFlex = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
   @media only screen and (max-width: 1115px) {
     width: 400px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+    flex-direction: column;
   }
 `;
 
@@ -541,6 +582,10 @@ const ReturnContainer = styled.div`
   > a {
     color: inherit;
     text-decoration: none;
+  }
+
+  @media only screen and (max-width: 550px) {
+    width: 100%;
   }
 `;
 
@@ -600,6 +645,10 @@ const FlexWrapper2 = styled.div`
   @media only screen and (max-width: 1115px) {
     width: 400px;
   }
+
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+  }
 `;
 
 const CommentContainer = styled.div`
@@ -612,6 +661,10 @@ const CommentContainer = styled.div`
   @media only screen and (max-width: 1115px) {
     margin-left: 0;
     width: 400px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    width: 100%;
   }
 `;
 

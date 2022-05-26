@@ -64,9 +64,11 @@ const TopFooter = () => {
             <p><a href='#'>Terms and Conditions</a></p>
             <p><a href='#'>Privacy Policy & Cookies</a></p>
             <p><a href='#'>Partners</a></p>
-            <a href='#'><i className='fa fa-twitter-square'></i></a>
-            <a href='#'><i className='fa fa-facebook-square'></i></a>
-            <a href='#'><i className='fa fa-instagram'></i></a>
+            <div>
+              <a href='#'><i className='fa fa-twitter-square'></i></a>
+              <a href='#'><i className='fa fa-facebook-square'></i></a>
+              <a href='#'><i className='fa fa-instagram'></i></a>
+            </div>
           </FooterBotFlexItem>
 
           <FooterBotFlexItem>
@@ -127,6 +129,16 @@ const FooterBot = styled.div`
     color: #e4e3e3;
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 550px) {
+    padding: 70px 0 20px 0;
+    width: 60%
+    margin: auto;
+
+    > p {
+      text-align: center;
+    }
+  }
 `;
 
 const FooterBotFlex = styled.div`
@@ -143,9 +155,13 @@ const FooterBotFlex = styled.div`
       color: #C6AC96;
       transition: 0.3s;
     }
+
+    @media only screen and (max-width: 550px) {
+      padding-right: 0;
+    }
   }
 
-  > div > a > i {
+  > div > div > a > i {
     margin-top: 5px;
     color: #737171;
     padding-right: 15px;
@@ -154,6 +170,12 @@ const FooterBotFlex = styled.div`
     &:hover {
       color: #C6AC96;
       transition: 0.3s;
+    }
+
+    @media only screen and (max-width: 550px) {
+      margin-bottom: 30px;
+      padding-right: 7px;
+      font-size: 22px;
     }
   }
 
@@ -188,6 +210,15 @@ const FooterBotFlexItem = styled.div`
       margin-right: 10px;
     }
     font-size: 14px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+
+    > a > img:first-child {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
   }
 `;
 

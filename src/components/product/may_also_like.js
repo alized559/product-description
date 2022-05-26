@@ -10,7 +10,7 @@ import LocationImage from '../../images/location.png';
 const MayAlsoLike = () => {
   return (
     <ProductContainer className='container-fluid'>
-      <div className='row'>
+      <Row className='row'>
         <div className='col'>
           <a href='#'>
             <ProductCard>
@@ -86,7 +86,7 @@ const MayAlsoLike = () => {
             </ProductCard>
           </a>
         </div>
-      </div>
+      </Row>
     </ProductContainer>
   );
 };
@@ -105,6 +105,15 @@ const ProductContainer = styled.div`
       color: inherit;
     }
   }
+
+  @media only screen and (max-width: 400px) {
+    padding: 130px 20px 100px 20px;
+  }
+`;
+
+const Row = styled.div`
+  width: 100%;
+  margin: auto;
 `;
 
 const ProductCard = styled.div`
@@ -123,6 +132,10 @@ const ProductCard = styled.div`
 
   @media only screen and (max-width: 1400px) {
     margin-top: 20px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    width: 100%;
   }
 `;
 
